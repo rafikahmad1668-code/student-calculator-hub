@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Calculator Hub - Free GPA & Grade Calculators</title>
+    <meta name="description" content="Free student tools: GPA calculator, grade calculator, study time planner. Calculate what you need to ace your exams!">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📚 Student Calculator Hub</h1>
+            <p>Free tools to help you succeed in school</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- GPA Calculator -->
+        <section class="calculator-card">
+            <h2>🎓 GPA Calculator</h2>
+            <p>Calculate your Grade Point Average</p>
+            <div class="input-group">
+                <label>Number of Classes:</label>
+                <input type="number" id="numClasses" min="1" max="10" value="4">
+            </div>
+            <div id="gpaInputs"></div>
+            <button onclick="calculateGPA()" class="btn">Calculate GPA</button>
+            <div id="gpaResult" class="result"></div>
+        </section>
+
+        <!-- Grade Calculator -->
+        <section class="calculator-card">
+            <h2>📝 Final Exam Grade Calculator</h2>
+            <p>Find out what score you need on your final exam</p>
+            <div class="input-group">
+                <label>Current Grade (%):</label>
+                <input type="number" id="currentGrade" min="0" max="100" placeholder="85">
+            </div>
+            <div class="input-group">
+                <label>Desired Grade (%):</label>
+                <input type="number" id="desiredGrade" min="0" max="100" placeholder="90">
+            </div>
+            <div class="input-group">
+                <label>Final Exam Weight (%):</label>
+                <input type="number" id="examWeight" min="0" max="100" placeholder="30">
+            </div>
+            <button onclick="calculateFinalGrade()" class="btn">Calculate Required Score</button>
+            <div id="gradeResult" class="result"></div>
+        </section>
+
+        <!-- Study Time Planner -->
+        <section class="calculator-card">
+            <h2>⏰ Study Time Planner</h2>
+            <p>Plan your study schedule effectively</p>
+            <div class="input-group">
+                <label>Days Until Exam:</label>
+                <input type="number" id="daysUntil" min="1" placeholder="7">
+            </div>
+            <div class="input-group">
+                <label>Total Hours Needed:</label>
+                <input type="number" id="totalHours" min="1" placeholder="20">
+            </div>
+            <div class="input-group">
+                <label>Hours Available Per Day:</label>
+                <input type="number" id="hoursPerDay" min="1" max="12" placeholder="3">
+            </div>
+            <button onclick="calculateStudyPlan()" class="btn">Create Study Plan</button>
+            <div id="studyResult" class="result"></div>
+        </section>
+
+        <!-- Ad Space Placeholder -->
+        <section class="ad-space">
+            <p>📢 Ad Space - Add Google AdSense code here</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Student Calculator Hub | Free Tools for Students</p>
+            <p>Made with ❤️ for students worldwide</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
